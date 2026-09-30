@@ -1,0 +1,338 @@
+/*
+=====================================================
+JOURNEY
+
+Seção responsável por apresentar a trajetória
+de evolução como desenvolvedor através de
+uma linha do tempo organizada.
+
+O layout combina:
+
+- Apresentação da jornada;
+- Formação;
+- Projetos práticos;
+- Estudos contínuos;
+- Próximos objetivos profissionais.
+
+Projeto: Portfólio 2.0
+Autor: Carlos Lima
+=====================================================
+*/
+
+.journey{
+
+    padding: 6rem 0;
+
+}
+
+.content{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+
+}
+
+/*
+=====================================================
+APRESENTAÇÃO DA JORNADA
+=====================================================
+*/
+
+.info{
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+
+.info span{
+
+    width: fit-content;
+    padding: .5rem 1rem;
+    border-radius: 999px;
+    background: var(--color-primary);
+    color: white;
+    font-size: .9rem;
+    font-weight: 600;
+
+}
+
+.info h2{
+
+    font-size: 2.6rem;
+    line-height: 1.2;
+    color: var(--color-text);
+
+}
+
+.info p{
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text);
+
+}
+
+/*
+=====================================================
+LINHA DO TEMPO
+
+Organiza os eventos da trajetória em sequência
+vertical, conectando visualmente cada etapa.
+=====================================================
+*/
+
+.timeline{
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-left: 2rem;
+
+}
+
+.timeline::before{
+
+    content: "";
+    position: absolute;
+    left: .75rem;
+    top: .5rem;
+    bottom: .5rem;
+    width: 2px;
+    background: var(--color-border);
+
+}
+
+/*
+=====================================================
+CARDS DA TIMELINE
+
+Cada card representa uma etapa da trajetória
+profissional ou acadêmica.
+=====================================================
+*/
+
+.timelineItem{
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    transition: 
+        transform var(--transition-default),
+        border-color var(--transition-default),
+        box-shadow var(--transition-default);
+
+}
+
+.timelineItem:hover{
+
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, .08);
+
+}
+
+.timelineItem h3{
+
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text);
+
+}
+
+.timelineItem p{
+
+    line-height: 1.6;
+    color: var(--color-text);
+
+}
+
+/*
+=====================================================
+INDICADORES DOS CARDS
+
+Os indicadores destacam o período ou estágio
+de cada item da timeline.
+=====================================================
+*/
+
+.timelineItem span{
+
+    display: inline-block;
+    width: fit-content;
+    padding: .35rem .75rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--color-primary) 14%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-primary) 28%, var(--color-border));
+    color: var(--color-primary);
+    font-size: .8rem;
+    font-weight: 600;
+    margin-bottom: .85rem;
+
+}
+
+/*
+=====================================================
+MARCADORES DA TIMELINE
+
+Os marcadores conectam visualmente cada card
+à linha vertical da trajetória.
+=====================================================
+*/
+
+.timelineItem::before{
+
+    content: "";
+    position: absolute;
+    left: -1.65rem;
+    top: 1.7rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    border: 3px solid var(--color-surface);
+    box-shadow: 0 0 0 2px var(--color-border);
+
+}
+
+/*
+=====================================================
+RESPONSIVIDADE - TABLET
+
+Em telas de até 1024px o layout passa para
+uma única coluna, preservando a timeline.
+=====================================================
+*/
+
+@media (max-width: 1024px) {
+    
+    .journey{
+
+        padding: 5rem 0;
+
+    }
+
+    .content{
+
+        grid-template-columns: 1fr;
+        gap: 3rem;
+
+    }
+
+    .info h2{
+
+        font-size: clamp(2.2rem, 5vw, 3rem);
+
+    }
+
+}
+
+/*
+=====================================================
+RESPONSIVIDADE - MOBILE
+
+Em telas de até 767px os espaçamentos,
+tipografia e elementos da timeline são
+reduzidos para preservar a legibilidade.
+=====================================================
+*/
+
+@media (max-width: 767px) {
+    
+    .journey{
+
+        padding: 4rem 0;
+
+    }
+
+    .content{
+
+        gap: 2.5rem;
+
+    }
+
+    .info{
+
+        gap: 1.25rem;
+
+    }
+
+    .info span{
+
+        font-size: .8rem;
+        padding: .45rem .9rem;
+
+    }
+
+    .info h2{
+
+        font-size: clamp(1.8rem, 7vw, 2.3rem);
+        line-height: 1.15;
+
+    }
+
+    .info p{
+
+        font-size: 1rem;
+        line-height: 1.75;
+
+    }
+
+    .timeline{
+
+        padding-left: 1.5rem;
+        gap: 1rem;
+
+    }
+
+    .timeline::before{
+
+        left: .5rem;
+
+    }
+
+    .timelineItem{
+
+        padding: 1.25rem;
+
+    }
+
+    .timelineItem::before{
+
+        left: -1.28rem;
+        width: 10px;
+        height: 10px;
+
+    }
+
+    .timelineItem h3{
+
+        font-size: 1rem;
+
+    }
+
+    .timelineItem p{
+
+        font-size: .95rem;
+        line-height: 1.6;
+
+    }
+
+    .timelineItem span{
+
+        font-size: .75rem;
+        padding: .3rem .7rem;
+
+    }
+
+}

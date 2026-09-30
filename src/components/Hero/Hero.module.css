@@ -1,0 +1,408 @@
+/*
+=====================================================
+HERO
+
+Seção principal do portfólio responsável pela primeira
+apresentação do profissional.
+
+O layout combina:
+
+- Apresentação profissional;
+- Chamada para ação;
+- Tecnologias principais;
+- Representação visual de código.
+
+A estrutura utiliza CSS Grid no desktop e é reorganizada
+para uma única coluna em telas menores.
+
+Projeto: Portfólio 2.0
+Autor: Carlos Lima
+=====================================================
+*/
+
+.hero {
+
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  
+}
+
+.content {
+
+   display: grid;
+   grid-template-columns: 1.1fr .9fr;
+   gap: 6rem;
+   align-items: center;
+
+}
+
+/*
+=====================================================
+APRESENTAÇÃO PROFISSIONAL
+
+Agrupa as informações principais do profissional,
+incluindo identificação, headline, descrição,
+ações e tecnologias.
+=====================================================
+*/
+
+.info {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    max-width: 560px;
+
+}
+
+.badge {
+
+    width: fit-content;
+    padding: .5rem 1rem;
+    border-radius: 999px;
+    background: var(--color-primary);
+    color: white;
+    font-size: .9rem;
+    font-weight: 600;
+
+}
+
+.info h1{
+
+    font-size: 2.6rem;
+    line-height: 1.2;
+    letter-spacing: -1px;
+
+}
+
+.info p{
+
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--color-text);
+
+}
+
+/*
+=====================================================
+AÇÕES PRINCIPAIS
+
+Botões responsáveis por direcionar o usuário
+para projetos e contato.
+=====================================================
+*/
+
+.buttons {
+
+    display: flex;
+    gap: 1rem;
+
+}
+
+.primaryButton,
+.secondaryButton {
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .9rem 1.8rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 
+        transform var(--transition-default),
+        box-shadow var(--transition-default),
+        background var(--transition-default),
+        color var(--transition-default);
+
+}
+
+.primaryButton {
+
+    background: var(--color-primary);
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+
+}
+
+.primaryButton:hover{
+
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .18);
+
+}
+
+.secondaryButton {
+
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    background: transparent;
+
+}
+
+.secondaryButton:hover{
+
+    transform: translateY(-3px);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+
+}
+
+/*
+=====================================================
+CARD DE CÓDIGO
+
+Representação visual semelhante a um editor de código,
+utilizada para reforçar a identidade técnica do portfólio.
+=====================================================
+*/
+
+.codeCard{
+
+    position: relative;
+    padding: 2.2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    box-shadow: 
+        0 10px 35px rgba(0, 0, 0, .06);
+    transition: 
+        transform var(--transition-default),
+        box-shadow var(--transition-default);
+
+}
+
+.codeCard::before{
+
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 22px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ff5f56;
+    box-shadow: 
+        20px 0 #ffbd2e,
+        40px 0 #27c93f;
+
+}
+
+.codeCard:hover{
+
+    transform: translateY(-6px);
+    box-shadow: 
+        0 18px 45px rgba(0, 0, 0, .10);
+
+}
+
+.codeCard pre{
+
+    overflow: auto;
+    margin: 0;
+    font-size: .96rem;
+    line-height: 2;
+    font-family: 
+        "Fira code", 
+        "Cascadia Code",
+        monospace;
+
+}
+
+/*
+=====================================================
+TECNOLOGIAS
+
+Chips que apresentam rapidamente as principais
+tecnologias utilizadas no desenvolvimento.
+
+Além de reforçarem a identidade visual, permitem
+que o recrutador identifique rapidamente parte
+do stack utilizado.
+=====================================================
+*/
+
+.techStack {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: .9rem;
+    margin-top: 1rem;
+
+}
+
+.techStack span{
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .55rem 1rem;
+    border-radius: 999px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    font-size: .88rem;
+    font-weight: 600;
+    letter-spacing: .3px;
+    transition: 
+        transform var(--transition-default),
+        border-color var(--transition-default),
+        background var(--transition-default),
+        color var(--transition-default),
+        box-shadow var(--transition-default);
+
+}
+
+.techStack span:hover{
+
+    transform: translateY(-3px);
+    border-color: var(--color-primary);
+    background: 
+        color-mix(in srgb, var(--color-primary) 8%, var(--color-surface));
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, .08);
+
+}
+
+/*
+=====================================================
+RESPONSIVIDADE - TABLET
+
+Em telas de até 1024px o conteúdo passa para
+uma única coluna para preservar legibilidade
+e espaço adequado entre os elementos.
+=====================================================
+*/
+
+@media (max-width: 1024px) {
+    
+    .hero{
+
+        padding: 5rem 0;
+
+    }
+
+    .content{
+
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        align-items: center;
+
+    }
+
+    .info{
+
+        max-width: 100%;
+
+    }
+
+    .info h1{
+
+        font-size: clamp(2.2rem, 5vw, 3rem);
+
+    }
+
+    .buttons{
+
+        flex-wrap: wrap;
+
+    }
+
+    .codeCard{
+
+        width: 100%;
+
+    }
+
+}
+
+/*
+=====================================================
+RESPONSIVIDADE - MOBILE
+
+Em telas de até 767px são reduzidos os espaçamentos,
+tamanhos tipográficos e dimensões dos elementos para
+melhorar a experiência em dispositivos menores.
+=====================================================
+*/
+
+@media (max-width: 767px) {
+    
+    .hero{
+
+        min-height: auto;
+        padding: 2.5rem 0;
+
+    }
+
+    .content{
+
+        gap: 2.5rem;
+
+    }
+
+    .badge{
+
+        font-size: .8rem;
+        padding: .45rem .9rem;
+
+    }
+
+    .info h1{
+
+        font-size: clamp(2rem, 8vw, 2.5rem);
+        line-height: 1.15;
+
+    }
+
+    .info p{
+
+        font-size: 1rem;
+        line-height: 1.7;
+
+    }
+
+    .buttons{
+
+        width: 100%;
+        flex-direction: column;
+
+    }
+
+    .primaryButton,
+    .secondaryButton{
+
+        width: 100%;
+
+    }
+
+    .techStack{
+
+        gap: .65rem;
+
+    }
+
+    .techStack span{
+
+        font-size: .82rem;
+        padding: .5rem .85rem;
+
+    }
+
+    .codeCard{
+
+        padding: 1.5rem;
+        border-radius: var(--radius-md);
+
+    }
+
+    .codeCard pre{
+
+        font-size: .82rem;
+        line-height: 1.7;
+
+    }
+
+}

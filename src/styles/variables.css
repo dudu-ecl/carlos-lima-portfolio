@@ -1,0 +1,69 @@
+/* =====================================================
+   DESIGN TOKENS
+   Projeto: Portfólio 2.0
+   Autor: Carlos Lima
+===================================================== */
+
+/* ---------- CORES ---------- */
+
+:root {
+
+  /* Cor principal */
+  --color-primary: #e63946;
+
+  /* Tema Claro */
+  --color-background: #ffffff;
+  --color-surface: #f8f9fa;
+
+  --color-text: #1d1d1d;
+  --color-text-secondary: #6c757d;
+
+  --color-border: #e9ecef;
+
+  /* ---------- TIPOGRAFIA ---------- */
+
+  --font-family:
+  "Inter",
+  Arial,
+  Helvetica,
+  sans-serif;
+
+  /* Tamanhos */
+
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-md: 1rem;
+  --font-lg: 1.25rem;
+  --font-xl: 2rem;
+  --font-2xl: 3rem;
+  --font-3xl: 4rem;
+  
+  /* ---------- ESPAÇAMENTOS ---------- */
+
+  --space-xs: .5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  /* ------- BORDAS ------- */
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* ------- SOMBRAS ------- */
+
+  --shadow-sm: 
+    0 2px 8px rgba(0, 0, 0, .08);
+
+  --shadow-md:
+  0 8px 24px rgba(0, 0, 0, .12);
+
+  /* ------- TRANSIÇÕES ------- */
+
+  --transition-default:
+    250ms ease;
+    
+}

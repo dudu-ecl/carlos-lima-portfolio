@@ -1,0 +1,56 @@
+/*
+=====================================================
+CONTAINER
+
+Componente utilitário responsável por limitar
+a largura máxima do conteúdo e manter seu
+alinhamento centralizado na página.
+
+A largura é ajustada progressivamente nos
+breakpoints para aproveitar melhor o espaço
+disponível em diferentes tamanhos de tela.
+
+Projeto: Portfólio 2.0
+Autor: Carlos Lima
+=====================================================
+*/
+
+.container {
+
+    width: min(1120px, 90%);
+    margin-inline: auto;
+    
+}
+
+/*
+=====================================================
+RESPONSIVIDADE - TABLET
+=====================================================
+*/
+
+
+@media (max-width: 1024px){
+
+    .container{
+
+        width: min(92%, 1120px);
+
+    }
+
+}
+
+/*
+=====================================================
+RESPONSIVIDADE - MOBILE
+=====================================================
+*/
+
+@media (max-width: 767px){
+
+    .container{
+
+        width: min(94%, 1120px);
+
+    }
+
+}

@@ -1,0 +1,52 @@
+/*
+=====================================================
+THEME TOGGLE
+
+Responsável pela aparência do botão utilizado
+para alternar entre os temas claro e escuro.
+
+O controle mantém a identidade visual da Navbar
+e utiliza os Design Tokens globais do projeto.
+
+Projeto: Portfólio 2.0
+Autor: Carlos Lima
+=====================================================
+*/
+
+.button{
+
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: transparent;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: 
+        transform var(--transition-default),
+        border-color var(--transition-default),
+        color var(--transition-default),
+        background var(--transition-default);
+}
+
+.button:hover{
+
+    transform: translateY(-2px);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.icon{
+
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+}

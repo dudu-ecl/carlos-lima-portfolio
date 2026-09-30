@@ -1,0 +1,49 @@
+/*
+=====================================================
+RESET GLOBAL
+
+Normaliza comportamentos padrão do navegador
+para manter maior consistência visual entre
+os elementos da aplicação.
+
+Responsável por:
+
+- Remover margens e espaçamentos padrão;
+- Padronizar o cálculo de dimensões;
+- Tornar imagens responsivas;
+- Herdar a tipografia nos controles;
+- Remover estilos padrão de links e listas.
+
+Projeto: Portfólio 2.0
+Autor: Carlos Lima
+=====================================================
+*/
+
+/* Reset básico */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+button, input,
+textarea{
+    font: inherit;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}

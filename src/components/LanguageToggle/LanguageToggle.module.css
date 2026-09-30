@@ -1,0 +1,45 @@
+/*
+=====================================================
+LANGUAGE TOGGLE
+
+Responsável pela aparência do botão utilizado
+para alternar o idioma da aplicação.
+
+O botão mantém a identidade visual dos demais
+controles da Navbar e utiliza os Design Tokens
+globais do projeto.
+
+Projeto: Portfólio 2.0
+Autor: Carlos Lima
+=====================================================
+*/
+
+.button{
+
+    min-width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: transparent;
+    color: var(--color-text);
+    font-size: .85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 
+        transform var(--transition-default),
+        border-color var(--transition-default),
+        color var(--transition-default),
+        background var(--transition-default);
+
+}
+
+.button:hover{
+
+    transform: translateY(-2px);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+
+}
