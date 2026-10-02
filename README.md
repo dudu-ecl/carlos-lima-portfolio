@@ -23,6 +23,10 @@ O projeto foi construído com foco em organização, responsividade, boas práti
 - Preview de projetos com lazy loading
 - Interface baseada em componentes reutilizáveis
 
+## Screenshot
+
+![Preview do Portfólio 2.0](src/assets/projects/portfolio2.png)
+
 ## Estrutura principal
 
 O portfólio é organizado nas seguintes seções:
