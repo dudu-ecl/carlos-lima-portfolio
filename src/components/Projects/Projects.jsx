@@ -97,25 +97,27 @@ function Projects() {
                                 <span>CSS Modules</span>
 
                             </div>
-                            {/*
+
                             <div className={styles.actions}>
 
                                 <a 
-                                    href="#"
+                                    href="https://github.com/dudu-ecl/carlos-lima-portfolio"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className={styles.secondaryButton}
                                 >
                                     {texts.projects.githubButton}
                                 </a>
-
+                                {/*
                                 <a 
                                     href="#"
                                     className={styles.primaryButton}
                                 >
                                     {texts.projects.viewProjectButton}
                                 </a>
-
+                                */}
                             </div>
-                            */}
+
                         </article>
 
                     {/*
