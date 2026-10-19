@@ -108,14 +108,16 @@ function Projects() {
                                 >
                                     {texts.projects.githubButton}
                                 </a>
-                                {/*
+
                                 <a 
-                                    href="#"
+                                    href="https://carlos-lima-portfolio-five.vercel.app/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className={styles.primaryButton}
                                 >
                                     {texts.projects.viewProjectButton}
                                 </a>
-                                */}
+
                             </div>
 
                         </article>
