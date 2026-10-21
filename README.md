@@ -83,7 +83,7 @@ Essa evolução permite demonstrar não apenas a implementação das funcionalid
 
 ## Screenshot
 
-![Preview do Portfólio 2.0](src/assets/projects/portfolio2.png)
+![Preview do Portfólio 2.0](src/assets/projects/portfolio-final.png)
 
 ## Estrutura principal
 

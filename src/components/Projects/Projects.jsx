@@ -24,7 +24,7 @@ Autor: Carlos Lima
 
 import Container from "../Container/Container";
 import { useLanguage } from "../../hooks/useLanguage";
-import portfolioPreview from "../../assets/projects/portfolio2.png";
+import portfolioPreview from "../../assets/projects/portfolio-final.png";
 import styles from "./Projects.module.css";
 
 function Projects() {
